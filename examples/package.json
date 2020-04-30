@@ -5,11 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "dashbot": "^9.5.0",
-    "jovo-framework": "file:../"
+    "jovo-framework": "file:../",
+    "snyk": "^1.316.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "snyk": true
 }
